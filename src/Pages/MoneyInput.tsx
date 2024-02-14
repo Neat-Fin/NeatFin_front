@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import TransactionInput from "../Components/TransactionInput";
 import NavigationBar from "../Components/NavigationBar";
 import { Link } from 'react-router-dom';

@@ -1,4 +1,3 @@
-import React from "react";
 import PieChartComponent from "./PieChart";
  
 import '../Styles/Chartstyle.css';

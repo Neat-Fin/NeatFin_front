@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import { useState } from 'react';
 import Account from '../Components/Account';
 import GeneralSettings from '../Components/GeneralSettings';
 import MyPosts from '../Components/MyPosts';

@@ -1,4 +1,3 @@
-import React from 'react';
 import '../Styles/MyPagestyle.css'
 function MyPosts () {
  

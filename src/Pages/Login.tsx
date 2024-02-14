@@ -1,5 +1,4 @@
-import React  from "react";
- import "../Styles/Login.css";
+import "../Styles/Login.css";
 import Footer from "../Components/Footer";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';

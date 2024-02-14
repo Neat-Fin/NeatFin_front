@@ -1,4 +1,3 @@
-import React from 'react';
 import "../Styles/MyPagestyle.css"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faCommentDots , faClipboardQuestion} from '@fortawesome/free-solid-svg-icons';

@@ -1,4 +1,3 @@
-import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 
 const PieChartcomponent =() => {
@@ -65,8 +64,9 @@ const PieChartcomponent =() => {
             fill="#8884d8"
             dataKey="value"
           >
-            {finalData.map((entry, index) => (
-              <Cell key={`cell-${index}`} fill={COLORS[index % COLORS.length]} />
+            {finalData.map((index) => (
+               
+              <Cell key={`cell-${index}`} fill={COLORS[+index % COLORS.length]} />
             ))}
           </Pie>
         </PieChart>
