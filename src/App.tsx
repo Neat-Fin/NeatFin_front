@@ -17,7 +17,7 @@ function App() {
     <>
    <HashRouter  >       
     <Routes>
-      <Route path={"NeatFin_front/"} element={<Login />}></Route> {/* 첫 시작 화면 login*/}
+      <Route path={"/"} element={<Login />}></Route> {/* 첫 시작 화면 login*/}
       <Route path={"/dashboard"} element={<Dashboard />}></Route> 
       <Route path={"/googlebtn"} element={<Googlebtn />}></Route> 
       <Route path={"/mypage"} element={<Mypage />}></Route> 
