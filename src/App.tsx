@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-   <BrowserRouter>       
+   <BrowserRouter basename={import.meta.env.PUBLIC_URL}>       
     <Routes>
       <Route path={"/"} element={<Login />}></Route> {/* 첫 시작 화면 login*/}
       <Route path={"/dashboard"} element={<Dashboard />}></Route> 
