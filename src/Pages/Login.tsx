@@ -28,7 +28,7 @@ function Login(){
             
             <Googlebtn />
 
-            <img className="img1" src="/src/assets/mainimg1.png" alt="img" />
+            <img className="img1" src="https://private-user-images.githubusercontent.com/96950198/305324338-a38287e4-2345-463f-9170-3f21aeb41b29.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDgwNjUyOTQsIm5iZiI6MTcwODA2NDk5NCwicGF0aCI6Ii85Njk1MDE5OC8zMDUzMjQzMzgtYTM4Mjg3ZTQtMjM0NS00NjNmLTkxNzAtM2YyMWFlYjQxYjI5LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE2VDA2Mjk1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPTE4ZDAzYWQ0Yjg2ZTFkYTUxNTI3OTgwZDc0MjlmNDFiNzFkMjBhOGZmMGY0ZTFjYWM0YTYxYTBmMTYwYTE4MDYmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.yY-KMCpD8tJIUk5tg0ZByTiGLF6UNyv9yFwcgk0dLpw" alt="img" />
             <h3 style={{color: "#555"}}>            
             Ease your concerns about your finances.  
             Let's embark on a journey towards a brighter future together. 
@@ -95,7 +95,7 @@ Exchange valuable tips on financial management and share experiences with others
            </h3>
          </div>
         <div className="text2">           
-        <img className="img2" src="/src/assets/mainimg2.png" alt="img" />
+        <img className="img2" src="https://private-user-images.githubusercontent.com/96950198/305324349-f706d629-38bc-436b-a777-d4d741d0a8f6.png?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJnaXRodWIuY29tIiwiYXVkIjoicmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbSIsImtleSI6ImtleTUiLCJleHAiOjE3MDgwNjUyOTQsIm5iZiI6MTcwODA2NDk5NCwicGF0aCI6Ii85Njk1MDE5OC8zMDUzMjQzNDktZjcwNmQ2MjktMzhiYy00MzZiLWE3NzctZDRkNzQxZDBhOGY2LnBuZz9YLUFtei1BbGdvcml0aG09QVdTNC1ITUFDLVNIQTI1NiZYLUFtei1DcmVkZW50aWFsPUFLSUFWQ09EWUxTQTUzUFFLNFpBJTJGMjAyNDAyMTYlMkZ1cy1lYXN0LTElMkZzMyUyRmF3czRfcmVxdWVzdCZYLUFtei1EYXRlPTIwMjQwMjE2VDA2Mjk1NFomWC1BbXotRXhwaXJlcz0zMDAmWC1BbXotU2lnbmF0dXJlPWEwNDBhNzFmMzVhZDVmYzk3NzQ5MjM2ZDczNmU1MTA5ZTIxNzk5NTZhMDAzZDg0Y2NhODRkMWE1YzU4YzA3NjcmWC1BbXotU2lnbmVkSGVhZGVycz1ob3N0JmFjdG9yX2lkPTAma2V5X2lkPTAmcmVwb19pZD0wIn0.oRD76JkuHQ_RY30ZJfIjg7GpVU-_P96uVbUkxDSGqhY" alt="img" />
 
          </div>
         </div>

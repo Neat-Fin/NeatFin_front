@@ -15,7 +15,7 @@ interface NavigationBarProps {
 function NavigationBar({ menuItems }: NavigationBarProps) {
     const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
     const isLoggedIn = !!sessionStorage.getItem('name'); // name이 존재하면 true, 없으면 false
-    const redirectPath = isLoggedIn ? '/dashboard' : '/';
+    const redirectPath = isLoggedIn ? '/NeatFin_front/dashboard' : '/NeatFin_front';
 
     const toggleMobileMenu = () => {
       setMobileMenuOpen(!isMobileMenuOpen);
