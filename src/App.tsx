@@ -18,18 +18,17 @@ function App() {
    <HashRouter >       
     <Routes>
       <Route path='/' element={<Login />}></Route> {/* 첫 시작 화면 login*/}
-      <Route path={"/dashboard"} element={<Dashboard />}></Route> 
-      <Route path={"/googlebtn"} element={<Googlebtn />}></Route> 
-      <Route path={"/mypage"} element={<Mypage />}></Route> 
-      <Route path={"/chart"} element={<Chart />}></Route> 
-      <Route path={"/moneybook/moneyinput"} element={<MoneyInput />}></Route> 
-      <Route path={"/moneybook/photoinput"} element={<PhotoInput />}></Route> 
-      <Route path={"/moneybook"} element={<MoneyBook />}></Route> 
-      <Route path={"/board"} element={<Board />}></Route> 
-      <Route path={"/board/writepost"} element={<WritePost />}></Route> 
-      <Route path={"/board/:postId"} element={<PostDetail />}></Route> 
-      <Route path={"*"} element={<NotFoundPage />}></Route>
-
+      <Route path="/dashboard" element={<Dashboard />} />
+      <Route path="/googlebtn" element={<Googlebtn />} />
+      <Route path="/mypage" element={<Mypage />} />
+      <Route path="/chart" element={<Chart />} />
+      <Route path="/moneybook/moneyinput" element={<MoneyInput />} />
+      <Route path="/moneybook/photoinput" element={<PhotoInput />} />
+      <Route path="/moneybook" element={<MoneyBook />} />
+      <Route path="/board" element={<Board />} />
+      <Route path="/board/writepost" element={<WritePost />} />
+      <Route path="/board/:postId" element={<PostDetail />} />
+      <Route path="*" element={<NotFoundPage />} />
      </Routes>          
    </HashRouter>
     </>
