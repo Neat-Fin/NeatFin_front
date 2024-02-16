@@ -1,4 +1,4 @@
-import {  BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import Login from './Pages/Login';
 import Dashboard from './Pages/Dashboard';
 import Googlebtn from './Components/Googlebtn';
@@ -15,7 +15,7 @@ function App() {
 
   return (
     <>
-   <BrowserRouter basename={"/NeatFin_front/" } >       
+   <HashRouter >       
     <Routes>
       <Route path={"/"} element={<Login />}></Route> {/* 첫 시작 화면 login*/}
       <Route path={"/dashboard"} element={<Dashboard />}></Route> 
@@ -31,7 +31,7 @@ function App() {
       <Route path={"*"} element={<NotFoundPage />}></Route>
 
      </Routes>          
-   </BrowserRouter>
+   </HashRouter>
     </>
   )
 }
