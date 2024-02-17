@@ -1,5 +1,6 @@
 .boardContainer{
     margin-top: 13vh;
+    height: 100vh;
 }
 .search{
     width: 80%;

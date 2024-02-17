@@ -60,7 +60,15 @@ const Board: React.FC = () => {
         </tr>
       </thead>
       <tbody>
-      {storedPosts.map((post) => (
+      {storedPosts.length === 0 ? (
+  <tr >
+    <td style={{ padding: '10vh 2vw'  }} colSpan={4}>
+    Currently, there are no posts in the community. Any topic is welcome. Please feel free to share your thoughts with us!
+
+    </td>
+  </tr>
+) : (
+      storedPosts.map((post) => (
       <tr key={post.postId}>
         <td>
           <Link to={`/board/${post.postId}`}>{post.datePosted}</Link>
@@ -78,6 +86,7 @@ const Board: React.FC = () => {
           </Link>
         </td>
       </tr>
+      )
     ))}
       </tbody>
     </table>

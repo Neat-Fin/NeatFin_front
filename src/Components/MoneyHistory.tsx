@@ -8,7 +8,9 @@ interface MoneyHistoryProps {
 const MoneyHistory: React.FC<MoneyHistoryProps> = ({ moneys }) => {
   return (
     <div className='historyContainer'>
-       
+        {moneys.length === 0 ? (
+        <p className="noHistoryMessage">No records are currently registered.</p>
+      ) : (
       <table className="historytable">
         
         <tbody>
@@ -22,6 +24,7 @@ const MoneyHistory: React.FC<MoneyHistoryProps> = ({ moneys }) => {
           ))}
         </tbody>
       </table>
+      )}
     </div>
   );
 };

@@ -8,6 +8,8 @@ const PieChartComponent: React.FC =() => {
 
 
   // 현재 월을 기준으로 소비 내역 필터링
+  const hasData = savedMoneys.length > 0;
+
   const currentMonthMoneys = savedMoneys.filter(
     (money: Money) => new Date(money.date).getMonth() + 1 === new Date().getMonth() + 1
   );
@@ -65,6 +67,11 @@ const PieChartComponent: React.FC =() => {
 
   return (
     <div>
+      {!hasData && (
+      <h3 style={{ textAlign: 'center', marginTop: '20px' }}>
+        No expense data available. Please input your expenses to generate the chart.
+      </h3>
+    )}
       <ResponsiveContainer width="100%" height={470}>
         <PieChart>
           <Legend wrapperStyle={{ bottom: 0, left: 0, backgroundColor: '#f5f5f5', border: '1px solid #d5d5d5', borderRadius: 3, lineHeight: '25px' }} />
@@ -84,6 +91,7 @@ const PieChartComponent: React.FC =() => {
           </Pie>
         </PieChart>
       </ResponsiveContainer>
+      
     </div>
   );
 };

@@ -29,7 +29,7 @@ function Login(){
             
             <Googlebtn />
 
-            <img className="img1" src="./public/mainimg1.png" alt="img" />
+            <img className="img1" src="./mainimg1.png" alt="img" />
             <h3 style={{color: "#555"}}>            
             Ease your concerns about your finances.  
             Let's embark on a journey towards a brighter future together. 
@@ -96,7 +96,7 @@ Exchange valuable tips on financial management and share experiences with others
            </h3>
          </div>
         <div className="text2">           
-        <img className="img2" src="./public/mainimg2.png" alt="img" />
+        <img className="img2" src="./mainimg2.png" alt="img" />
 
          </div>
         </div>

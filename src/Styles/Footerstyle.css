@@ -8,4 +8,6 @@ footer {
     border-top: 1px solid #dee5e7;
     background-color: #222;
     text-align: left;
+    bottom: auto;
+    left: 0;
 }
