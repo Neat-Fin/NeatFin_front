@@ -1,11 +1,8 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 import { Money } from './types';
-interface MoneyProps {
-  money: Money[];
-}
-
-const PieChartComponent: React.FC<MoneyProps> = () => {  
+ 
+const PieChartComponent: React.FC =() => {
   const savedMoneysString = localStorage.getItem('moneys');
   const savedMoneys = savedMoneysString ? JSON.parse(savedMoneysString) : [];
 
