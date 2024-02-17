@@ -2,7 +2,7 @@ footer {
     position: absolute;
     height: 10vh;
     width: 100%;
-    padding: 3%;
+    padding: 3% 0;
     line-height: 10vh;
     color: lightgray;
     border-top: 1px solid #dee5e7;
@@ -10,4 +10,10 @@ footer {
     text-align: left;
     bottom: auto;
     left: 0;
+}
+.footericon{
+    padding: 1%;
+    font-size: 2em;
+    color: lightgray;
+    
 }
