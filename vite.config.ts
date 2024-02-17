@@ -5,5 +5,8 @@ import react from '@vitejs/plugin-react-swc'
 export default defineConfig({
   plugins: [react()],
   base: "/NeatFin_front/",
+  server: {
+    port: 3000, 
+  },
   
 })

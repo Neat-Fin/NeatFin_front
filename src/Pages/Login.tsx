@@ -11,7 +11,10 @@ function Login(){
     <div className="wrap">
  
     <NavigationBar menuItems={[
-          { name: 'Home', link: 'home' },
+          { name: 'Home', link: '/#/home' },
+          { name: 'About', link: '/#/about' },
+          { name: 'Service', link:'/#/service'},
+          { name: 'Contact', link: '/#/contact' },
           
         ]}/>
     <div className="content-wrap">       
@@ -19,14 +22,14 @@ function Login(){
         <article id="home">
           <br />
            <h1>With <span style={{color: "#5931eb"}}>NeatFin</span> <br />
-            gain a clear overview of your expenses and income,<br />
+            gain a clear overview of your expenditure and income,<br />
              and achieve a better financial status
             
            </h1>
             
             <Googlebtn />
 
-            <img className="img1" src="src/assets/mainimg1.png" alt="img" />
+            <img className="img1" src="./public/mainimg1.png" alt="img" />
             <h3 style={{color: "#555"}}>            
             Ease your concerns about your finances.  
             Let's embark on a journey towards a brighter future together. 
@@ -52,8 +55,8 @@ Gain a quick understanding of your expenses and income with visually appealing c
 Neatly organized charts by period allow you to grasp your financial status at a glance.
             </p>
             <h3>
-            <span style={{color: "#5931ebe1"}}> Easy Expense Input </span> </h3>
-            <p>Input your expenses effortlessly and categorize them with our intuitive and user-friendly interface.
+            <span style={{color: "#5931ebe1"}}> Easy Expenditure Input </span> </h3>
+            <p>Input your expenditure effortlessly and categorize them with our intuitive and user-friendly interface.
 Manage your budget seamlessly without any hassle.
 </p> 
            
@@ -83,7 +86,7 @@ Exchange valuable tips on financial management and share experiences with others
            <br />
           <hr />
           <br />
-           <h3> Expense Tracking</h3>
+           <h3> Expenditure Tracking</h3>
            <h3 style={{color: "#555"}}>          
            Easily track your expenses and categorize them to understand where your money is going.
            </h3>
@@ -93,7 +96,7 @@ Exchange valuable tips on financial management and share experiences with others
            </h3>
          </div>
         <div className="text2">           
-        <img className="img2" src="src/assets/mainimg2.png" alt="img" />
+        <img className="img2" src="./public/mainimg2.png" alt="img" />
 
          </div>
         </div>
