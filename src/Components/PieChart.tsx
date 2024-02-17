@@ -11,9 +11,9 @@ const PieChartComponent: React.FC =() => {
   const hasData = savedMoneys.length > 0;
 
   const currentMonthMoneys = savedMoneys.filter(
-    (money: Money) => new Date(money.date).getMonth() + 1 === new Date().getMonth() + 1
+    (money: Money) =>
+      new Date(money.date).getMonth() + 1 === new Date().getMonth() + 1 && money.type === 'expense'
   );
-
   // 카테고리 별 소비액을 계산
   const categoryData: Record<string, number> = currentMonthMoneys.reduce((acc: Record<string, number>, money: Money) => {
     const category = money.category || 'Others';
