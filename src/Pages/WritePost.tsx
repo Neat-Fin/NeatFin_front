@@ -33,7 +33,7 @@ const WritePost: React.FC = () => {
 
   const handleSubmit = () => {
     if (!selectedCategory || !title || !content) {
-      alert('모든 필드를 채워주세요.');
+      alert('Please fill in all required fields.');
       return;  
     }
 
@@ -72,7 +72,7 @@ const WritePost: React.FC = () => {
      existingPosts.push(post);
   
      localStorage.setItem('posts', JSON.stringify(existingPosts));
-     const confirmation = window.confirm('제출되었습니다. 확인을 누르면 게시판으로 이동합니다.');
+     const confirmation = window.confirm('Submitted. Click OK to go to the Community.');
     
      if (confirmation) {
       navigate('/board');

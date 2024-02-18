@@ -23,8 +23,9 @@ function Login(){
     <h1>On <span style={{color: "#5931eb"}}>NeatFin</span> <br />            
            Get a clear overview of your expense and income. <br />
            Achieve better financial statement.            
-           </h1>            
-            <Googlebtn />
+    </h1>            
+    <Googlebtn />        
+  <br/>
     </div>
     <ImgSlider />      
       <section>

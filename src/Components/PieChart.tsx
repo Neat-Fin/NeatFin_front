@@ -1,7 +1,8 @@
 import React from 'react';
 import { PieChart, Pie, Cell, ResponsiveContainer, Legend } from 'recharts';
 import { Money } from './types';
- 
+import { Link } from 'react-router-dom';
+
 const PieChartComponent: React.FC =() => {
   const savedMoneysString = localStorage.getItem('moneys');
   const savedMoneys = savedMoneysString ? JSON.parse(savedMoneysString) : [];
@@ -68,8 +69,11 @@ const PieChartComponent: React.FC =() => {
   return (
     <div>
       {!hasData && (
-      <h3 style={{ textAlign: 'center', marginTop: '20px' }}>
+      <h3 style={{ textAlign: 'center', marginTop: '10vh' }}>
         No expense data available. Please input your expenses to generate the chart.
+        <div className='thebokibtn'>
+            <Link to="/moneybook">Go to Money Book &gt;</Link>
+          </div>
       </h3>
     )}
       <ResponsiveContainer width="100%" height={470}>

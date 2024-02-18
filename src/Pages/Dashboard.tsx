@@ -149,7 +149,7 @@ function Dashboard(){
          <h2>Share {userInfo.name}’s wonderful practice</h2>
           <p>Only I can see the detailed transaction history and amount.</p>
           <div className='thebokibtn'>
-            <Link to="/board">Go to Write a Post on the Bulletin Board &gt;</Link></div> 
+            <Link to="/board">Go to Write a Post on the Community &gt;</Link></div> 
          </div>
          
         </div>

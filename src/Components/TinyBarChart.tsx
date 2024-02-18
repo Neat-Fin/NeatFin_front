@@ -27,7 +27,7 @@ const TinyBarChart: React.FC<{ moneys: Money[] }> = ({ moneys }) => {
       const filteredData = pastMonthsMoneys.filter((money) => new Date(money.date).getMonth() + 1 === targetMonth);
       const totalAmount = filteredData.reduce((sum, money) => sum + Number(money.amount), 0);
       return {
-        name: new Date(new Date().getFullYear(), targetMonth - 1, 1).toLocaleDateString('ko-KR', { month: 'long' }),
+        name: new Date(new Date().getFullYear(), targetMonth - 1, 1).toLocaleDateString('en-us', { month: 'short' }),
         uv: totalAmount,
       };
     }).reverse();
