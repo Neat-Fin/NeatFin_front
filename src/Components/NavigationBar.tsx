@@ -5,6 +5,7 @@ import Googlebtn from "./Googlebtn";
 interface MenuItem {
   name: string;
   link: string;
+   
 }
 
 interface NavigationBarProps {
@@ -42,7 +43,12 @@ function NavigationBar({ menuItems }: NavigationBarProps) {
         window.removeEventListener('click', closeMenuOnOutsideClick);
       };
     }, [isMobileMenuOpen]);
-  
+    const scrollToSection = (sectionId: string) => {
+      const section = document.getElementById(sectionId);
+      if (section) {
+        section.scrollIntoView({ behavior: 'smooth' });
+      }
+    };
     return (
       <header>
           
@@ -64,9 +70,9 @@ function NavigationBar({ menuItems }: NavigationBarProps) {
                     {menuItem.name}
                   </Link>
                 ) : (
-                  <a href={menuItem.link} onClick={closeMobileMenu}>
-                    {menuItem.name}
-                  </a>
+                  <a onClick={() => scrollToSection(menuItem.link)}>
+                  {menuItem.name}
+                </a>
                 )}                
               </li>
                ))}

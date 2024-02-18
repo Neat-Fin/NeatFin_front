@@ -108,10 +108,13 @@ function Dashboard(){
         
         {userInfo ? (
         <div >
+
          <div className="DashBox">
         <h1>What's New in {userInfo.name}'s Moneybook</h1>
         <p></p>
          </div>
+         
+         <br />
          <div className='DetailBox'>
          <h3>{currentMonth} full details</h3>
     <h2><span style={{color:"darkblue"}}>₩{totalExpenses + totalIncome}</span></h2>

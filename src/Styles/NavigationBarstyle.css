@@ -1,9 +1,5 @@
 li { list-style: none; }
 a { text-decoration: none; }
-h1, h2, h3, p {
-margin: 1vw 0.5vw;
-}
-h1 { font-size: 3em; }
 header {      
     position: fixed;
     top: 0;
@@ -53,9 +49,7 @@ nav { float: right; }
        
        padding: auto; /* 모바일 화면에서 header의 높이를 자동으로 조정 */
     }
-    h1{
-       font-size: 1.8em;
-    }
+  
     .nav-items {
         display: none;
         text-align: center;

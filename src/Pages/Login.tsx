@@ -4,6 +4,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faGithub } from '@fortawesome/free-brands-svg-icons';
 import NavigationBar from "../Components/NavigationBar";
 import Googlebtn from "../Components/Googlebtn";
+import ImgSlider from "../Components/ImgSlider";
 function Login(){
   
     return(
@@ -11,26 +12,25 @@ function Login(){
     <div className="wrap">
  
     <NavigationBar menuItems={[
-          { name: 'Home', link: '/#/home' },
-          { name: 'About', link: '/#/about' },
-          { name: 'Service', link:'/#/service'},
-          { name: 'Contact', link: '/#/contact' },
+          { name: 'Home', link: 'home' },
+          { name: 'About', link: 'about' },
+          { name: 'Service', link:'service'},
+          { name: 'Contact', link: 'contact' },
           
         ]}/>
-    <div className="content-wrap">       
-      <section>
-        <article id="home">
-          <br />
-           <h1>With <span style={{color: "#5931eb"}}>NeatFin</span> <br />
-            gain a clear overview of your expenditure and income,<br />
-             and achieve a better financial status
-            
-           </h1>
-            
+    <div className="content-wrap"> 
+    <div id="home" style={{ marginLeft:" 3vw"}}>
+    <h1>On <span style={{color: "#5931eb"}}>NeatFin</span> <br />            
+           Get a clear overview of your expense and income. <br />
+           Achieve better financial statement.            
+           </h1>            
             <Googlebtn />
-
-            <img className="img1" src="./mainimg1.png" alt="img" />
-            <h3 style={{color: "#555"}}>            
+    </div>
+    <ImgSlider />      
+      <section>
+        <article >
+          <br />               
+             <h3 style={{color: "#555"}}>            
             Ease your concerns about your finances.  
             Let's embark on a journey towards a brighter future together. 
             We are here to assist you in experiencing a more joyful financial state.  

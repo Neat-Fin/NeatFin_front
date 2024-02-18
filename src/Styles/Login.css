@@ -18,7 +18,7 @@ h1 { font-size: 3em; }
 }
 section {
     float: right;
-    margin: 3vw;
+    margin: 0 3vw;
     scroll-margin-top: 14vh;
 }
 article {
@@ -29,8 +29,8 @@ article {
 
 .img1 {  
     display: block;
-    margin: auto;
-    width: 50%; /* 최대 너비를 화면 너비에 맞게 설정합니다. */
+    margin-top: 2vh;
+    width: 100%; 
     height: auto;
 }
 .img2 {  display: flex;
@@ -85,10 +85,9 @@ article {
 .contactbox h3 span{
     color: gray;
 }
-@media only screen and (max-width: 1000px) {
-    
+@media only screen and (max-width: 1000px) {    
     h1{
-       font-size: 1.5em;
+       font-size: 1.9em;
     }     
     section {
       float: none;
@@ -116,3 +115,9 @@ article {
     }
    
   }
+  @media only screen and (max-width: 500px) {    
+    h1{
+       font-size: 1.2em;
+    } }
+   
+    
