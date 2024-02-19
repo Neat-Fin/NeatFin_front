@@ -117,15 +117,16 @@ function Dashboard(){
          <br />
          <div className='DetailBox'>
          <h3>{currentMonth} full details</h3>
-    <h2><span style={{color:"darkblue"}}>₩{totalExpenses + totalIncome}</span></h2>
-    <hr />
-     <p>Expenses Transactions: {totalExpensesCount}   &nbsp;<span>₩{totalExpenses}</span></p>
+         <h2><span style={{ color: "darkblue" }}>₩{(totalExpenses + totalIncome).toFixed(2)}</span></h2>
+
+     <hr />
+     <p>Expenses Transactions: {totalExpensesCount}   &nbsp;<span>₩{(totalExpenses).toFixed(2)}</span></p>
     <br />
-    <p>Income Transactions: {totalIncomesCount} &nbsp;<span>₩{totalIncome}</span></p>
+    <p>Income Transactions: {totalIncomesCount} &nbsp;<span>₩{(totalIncome).toFixed(2)}</span></p>
 
          </div>
          <div className='chartBox'> 
-         <h2>You spent <span style={{color: "darkblue"}}>₩{difference} more</span> than in {previousMonth}.</h2>
+         <h2>You spent <span style={{color: "darkblue"}}>₩{(difference).toFixed(2)} more</span> than in {previousMonth}.</h2>
          {averageAmount !== null && (
         <p>The average transaction amount for the past 6 months is ₩{averageAmount}</p>
         )}
