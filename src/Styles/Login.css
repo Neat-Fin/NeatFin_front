@@ -23,7 +23,7 @@ section {
 }
 article {
   
-    padding: 3vh;
+    padding: 3vh 0;
     scroll-margin-top: 12vh;
 }
 
@@ -58,6 +58,7 @@ article {
 }      
 .text2 {
         flex: 1; /* 오른쪽 절반을 차지하도록 설정 */
+        padding: 1vw;
 }         
  
 .github-button {
@@ -85,6 +86,16 @@ article {
 .contactbox h3 span{
     color: gray;
 }
+
+.image-container {
+    display: flex; 
+}
+  
+.goalimg {
+   
+    max-width: 50%;  
+    height: auto;
+  }
 @media only screen and (max-width: 1000px) {    
     h1{
        font-size: 1.9em;
@@ -95,9 +106,9 @@ article {
       
     }
     article{
-        width: 90%;
-        margin: 1%;
-        padding: 25px;
+        width: 95%;
+        
+        padding: 3%;
         float: left;
      }
     
@@ -108,12 +119,18 @@ article {
      
     .container{
         flex-direction: column; /* 모바일 화면에서는 세로로 배치 */
-        width: 92%; 
+        width: 95%; 
     }
     .container2{
         flex-direction: column; /* 모바일 화면에서는 세로로 배치 */
     }
-   
+    .image-container {
+        flex-direction: column; 
+    }
+    .goalimg {   
+        max-width: 100%;  
+        
+      }
   }
   @media only screen and (max-width: 500px) {    
     h1{

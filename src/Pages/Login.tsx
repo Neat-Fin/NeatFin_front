@@ -45,8 +45,13 @@ function Login(){
         <article id="about">
           <br />
           <h1>About</h1>
-          
-           <h2>Take a look at NeatFin's main features.</h2>
+          <h2>To Responsible Consumption </h2>
+ 
+          <div className="image-container">
+          <img className="goalimg" src="./goal1.png" alt="" />
+          <img className="goalimg" src="./solution.png" alt="" />
+          </div>
+           <h2 style={{marginTop:"5vh"}}>Take a look at NeatFin's main features.</h2>
            <div className="container">
          <div className="text1">
             <h3  style={{ whiteSpace: "pre-line"}}>
@@ -59,9 +64,9 @@ Neatly organized charts by period allow you to grasp your financial status at a 
             <span style={{color: "#5931ebe1"}}> Easy Expenditure Input </span> </h3>
             <p>Input your expenditure effortlessly and categorize them with our intuitive and user-friendly interface.
 Manage your budget seamlessly without any hassle.
-</p> 
-           
+</p>           
          </div>
+
         <div className="text2">           
         <h3>
             <span style={{color: "#5931ebe1"}}> Automatic Entry with Receipt Photos </span></h3>
@@ -101,11 +106,12 @@ Exchange valuable tips on financial management and share experiences with others
 
          </div>
         </div>
-           </article>      
+        </article>      
         <article id="contact">           
           
           <h2>Frequently Asked Questions</h2>
           <div className="contactbox">
+            
           <h3>
           <hr />
           Is my data secure? <br />          
