@@ -2,14 +2,10 @@ import { useState } from 'react';
 import { Link } from 'react-router-dom';
 import Tesseract from 'tesseract.js';
 import NavigationBar from "../Components/NavigationBar";
-import { MoneyType, Money } from "../Components/types"; 
 import "../Styles/inputstyle.css";
 
-interface MoneyInputProps {
-  type: MoneyType;
- }
  
-function PhotoiInput({ type }: MoneyInputProps) {
+function PhotoInput( ) {
   const [selectedFile, setSelectedFile] = useState<File | null>(null);
   const [uploadedImageUrl, setUploadedImageUrl] = useState<string | null>(null);
   const [extractedAmount, setExtractedAmount] = useState<string | null>(null);
@@ -40,22 +36,11 @@ function PhotoiInput({ type }: MoneyInputProps) {
  
         setExtractedAmount(extractedAmount);
 
-        if (extractedAmount ) {
-          const newMoney: Money = {
-            id: Date.now(),
-            type: type === "expense" ? "expense" : "income",
-            category: "Auto-Extracted",
-            amount: parseFloat(extractedAmount),
-            date: "Auto-Date",
-            detail: "Auto-Extracted Transaction",
-          };
-
-           console.log(newMoney);
-        }
+        
+         
+        
       });
-    } else {
-      console.error('No file selected');
-    }
+    } 
   };
 
   return (
@@ -99,4 +84,4 @@ function PhotoiInput({ type }: MoneyInputProps) {
   );
 }
 
-export default PhotoiInput;
+export default PhotoInput;
