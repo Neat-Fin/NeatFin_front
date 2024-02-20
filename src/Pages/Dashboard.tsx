@@ -5,7 +5,7 @@ import "../Styles/Dashstyle.css"
 import TinyBarChart from '../Components/TinyBarChart';
 import { Link } from 'react-router-dom';
 import { Money } from '../Components/types';
-interface UserInfo {     
+ interface UserInfo {     
     name: string;
     
   }
@@ -94,8 +94,7 @@ function Dashboard(){
          .reduce((sum, money) => sum + Number(money.amount), 0);
      
        const difference = currentMonthTotal - previousMonthTotal;
-     
- 
+      
     return(
         <div className='Container'>
         <NavigationBar menuItems={[
@@ -117,18 +116,18 @@ function Dashboard(){
          <br />
          <div className='DetailBox'>
          <h3>{currentMonth} full details</h3>
-         <h2><span style={{ color: "darkblue" }}>₩{(totalExpenses + totalIncome).toFixed(2)}</span></h2>
+         <h2><span style={{ color: "darkblue" }}>₩{Math.round(totalExpenses + totalIncome)}</span></h2>
 
      <hr />
-     <p>Expenses Transactions: {totalExpensesCount}   &nbsp;<span>₩{(totalExpenses).toFixed(2)}</span></p>
+     <p>Expenses Transactions: {totalExpensesCount}   &nbsp;<span>₩{Math.round(totalExpenses)}</span></p>
     <br />
-    <p>Income Transactions: {totalIncomesCount} &nbsp;<span>₩{(totalIncome).toFixed(2)}</span></p>
+    <p>Income Transactions: {totalIncomesCount} &nbsp;<span>₩{Math.round(totalIncome)}</span></p>
 
          </div>
          <div className='chartBox'> 
-         <h2>You spent <span style={{color: "darkblue"}}>₩{(difference).toFixed(2)} more</span> than in {previousMonth}.</h2>
+         <h2>You spent <span style={{color: "darkblue"}}>₩{Math.round(difference)} more</span> than in {previousMonth}.</h2>
          {averageAmount !== null && (
-        <p>The average transaction amount for the past 6 months is ₩{averageAmount}</p>
+        <p>The average transaction amount for the past 5 months is ₩{averageAmount}</p>
         )}
          <br />
          <div className='barChartBox'> <TinyBarChart moneys={moneys}/></div>
@@ -155,7 +154,13 @@ function Dashboard(){
          
         </div>
         ):( 
-        <p>Sign in Use your Google Account</p>
+        <div style={{height:"80vh"}}>
+        <h3>  Sign in Use your Google Account </h3>
+         
+        <Link to="/">Go to login &gt;</Link>
+
+       
+        </div>
         )}
          
         </div>
