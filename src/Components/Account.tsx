@@ -1,4 +1,4 @@
-import  { useEffect, useState } from 'react';
+import  { useEffect, useState, ChangeEvent  } from 'react';
 import "../Styles/Accountstyle.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {  faEnvelope  } from '@fortawesome/free-solid-svg-icons';
@@ -10,6 +10,8 @@ interface UserInfo {
 }
 function Account() {
   const [userInfo, setUserInfo] = useState<UserInfo | null>(null);
+  const [spendingAmount, setSpendingAmount] = useState("");
+  const [pledgeText, setPledgeText] = useState("");
 
   useEffect(() => {
     // 세션 스토리지에서 정보 읽어오기
@@ -25,7 +27,32 @@ function Account() {
       };
       setUserInfo(userObj);
     }
+    const storedSpendingAmount = localStorage.getItem("spendingAmount");
+    const storedPledgeText = localStorage.getItem("pledgeText");
+
+    if (storedSpendingAmount) {
+      setSpendingAmount(storedSpendingAmount);
+    }
+
+    if (storedPledgeText) {
+      setPledgeText(storedPledgeText);
+    }
   }, []);  
+  const handleSpendingAmountChange = (event: ChangeEvent<HTMLInputElement>) => {
+    const value = event.target.value;
+    setSpendingAmount(value);
+  };
+
+  const handlePledgeTextChange = (event: ChangeEvent<HTMLTextAreaElement>) => {
+    const value = event.target.value;
+    setPledgeText(value);
+  };
+
+  // 버튼 클릭 시 로컬 스토리지에 저장
+  const handleSaveButtonClick = () => {
+    localStorage.setItem("spendingAmount", spendingAmount);
+    localStorage.setItem("pledgeText", pledgeText);
+  };
 
   return(
        <div className='AContainer'>
@@ -46,12 +73,28 @@ function Account() {
             <p>Managed by Google</p>
          </div>
          <div className="AccountContainer">
-          <h3>Set a target spending amount for this month</h3>
-          <input type="text"  className="nickinput"/>
-          <h3>Make a pledge to keep your goal</h3>
-          <div className='textareaBox'>
-        <textarea id="myTextArea" placeholder=' ' />
+         <h3>Set a target spending amount for this month</h3>
+
+         <input
+        type="text"
+        className="nickinput"
+        value={spendingAmount}
+        onChange={handleSpendingAmountChange}
+      />
+      
+
+      <h3>Make a pledge to keep your goal</h3>
+      <div className='textareaBox'>
+        <textarea
+          id="myTextArea"
+          placeholder=' '
+          value={pledgeText}
+          onChange={handlePledgeTextChange}
+        />
+        
       </div>
+      <button className='savebtn' onClick={handleSaveButtonClick}>Save</button>
+
          </div>
       
         <div className="AccountContainer">

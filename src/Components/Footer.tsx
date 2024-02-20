@@ -8,7 +8,7 @@ function Footer() {
       <a className="footericon" href="https://github.com/Neat-Fin" target="_blank">
         <FontAwesomeIcon icon={faGithub} /> 
       </a>
-      <a className="footericon" href="https://www.youtube.com/" target="_blank">
+      <a className="footericon" href="https://www.youtube.com/watch?v=ebX1k5tzI8U" target="_blank">
         <FontAwesomeIcon icon={faYoutube} /> 
       </a>
 
