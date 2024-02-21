@@ -10,6 +10,7 @@
   </div>
  
 </div>
+
  NeatFin is the subject of [Ensure sustainable consumption and production patterns](https://sdgs.un.org/goals/goal12) among the UN's Sustainable Development Goals.
 
 <div align = "center" >
@@ -29,6 +30,18 @@
 </a>
 
 </div>
+
+## Feature
+  <table>
+    <tr>
+      <td align="center"><b>Moneybook</b></td>
+      <td align="center"><b>Community</b></td>
+    </tr>
+    <tr>
+      <td><img src="https://github.com/Neat-Fin/NeatFin_front/assets/96950198/aee2cb65-9da3-4349-80d0-2ce86ab3e1e5"/></td>
+      <td><img src="https://github.com/Neat-Fin/NeatFin_front/assets/96950198/ebb48726-cec1-4385-a928-9856685992f0"/></td>
+    </tr>
+  </table>
 
 ## Repository Links
 
