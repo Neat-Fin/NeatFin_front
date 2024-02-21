@@ -62,16 +62,25 @@ function Dashboard(){
           const currentDate = new Date();
           const currentMonth = currentDate.getMonth() + 1;
       
-          const past6MonthsMoneys = moneys.filter(
+          const past5MonthsMoneys = moneys.filter(
             (money) =>
               new Date(money.date).getMonth() + 1 >= currentMonth - 5 &&
               new Date(money.date).getMonth() + 1 <= currentMonth
           );
       
-          const totalAmount = past6MonthsMoneys.reduce((sum, money) => sum + Number(money.amount), 0);
-          const average = totalAmount / past6MonthsMoneys.length;
-      
-          setAverageAmount(Math.round(average));
+          const expenseTransactionsInPast6Months = past5MonthsMoneys.filter((money) => money.type === "expense");
+
+const totalAmountForExpenses = expenseTransactionsInPast6Months.reduce(
+  (sum, money) => sum + Number(money.amount),
+  0
+);
+
+const averageForExpenses = expenseTransactionsInPast6Months.length > 0
+  ? totalAmountForExpenses / expenseTransactionsInPast6Months.length
+  : 0;
+
+setAverageAmount(Math.round(averageForExpenses));
+
           }
           
        }, []);  
@@ -85,16 +94,15 @@ function Dashboard(){
 
       const previousM = (currentM - 1 + 12) % 12;
        
-       const currentMonthTotal = moneys
-         .filter((money) => new Date(money.date).getMonth() + 1 === currentM)
-         .reduce((sum, money) => sum + Number(money.amount), 0);
-     
-       const previousMonthTotal = moneys
-         .filter((money) => new Date(money.date).getMonth() + 1 === previousM)
-         .reduce((sum, money) => sum + Number(money.amount), 0);
-     
-       const difference = currentMonthTotal - previousMonthTotal;
-      
+      const currentMonthExpenses = moneys
+      .filter((money) => money.type === "expense" && new Date(money.date).getMonth() + 1 === currentM)
+      .reduce((sum, money) => sum + Number(money.amount), 0);
+    
+    const previousMonthExpenses = moneys
+      .filter((money) => money.type === "expense" && new Date(money.date).getMonth() + 1 === previousM)
+      .reduce((sum, money) => sum + Number(money.amount), 0);
+    
+    const difference = currentMonthExpenses - previousMonthExpenses;
     return(
         <div className='Container'>
         <NavigationBar menuItems={[
