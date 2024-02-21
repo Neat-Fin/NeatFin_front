@@ -23,15 +23,21 @@ const TinyBarChart: React.FC<{ moneys: Money[] }> = ({ moneys }) => {
 
     // 월별로 데이터 구성
     const monthlyChartData = Array.from({ length: 5 }, (_, index) => {
-      const targetMonth = currentMonth - index;
-      const filteredData = pastMonthsMoneys.filter((money) => new Date(money.date).getMonth() + 1 === targetMonth);
+      let targetMonth = currentMonth - index;
+      if (targetMonth <= 0) {
+        targetMonth += 12; // 1월부터 12월로 순환
+      }
+      const filteredData = pastMonthsMoneys.filter((money) => {
+        const moneyMonth = new Date(money.date).getMonth() + 1;
+        return moneyMonth === targetMonth && money.type === 'expense';
+      });    
       const totalAmount = filteredData.reduce((sum, money) => sum + Number(money.amount), 0);
       return {
         name: new Date(new Date().getFullYear(), targetMonth - 1, 1).toLocaleDateString('en-us', { month: 'short' }),
         uv: totalAmount,
       };
     }).reverse();
-
+    
     setMonthlyData(monthlyChartData);
   }, [moneys]);
 
