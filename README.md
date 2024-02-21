@@ -38,8 +38,8 @@
       <td align="center"><b>Community</b></td>
     </tr>
     <tr>
-      <td><img src="https://github.com/Neat-Fin/NeatFin_front/assets/96950198/aee2cb65-9da3-4349-80d0-2ce86ab3e1e5"/></td>
-      <td><img src="https://github.com/Neat-Fin/NeatFin_front/assets/96950198/ebb48726-cec1-4385-a928-9856685992f0"/></td>
+      <td><img src="https://github.com/Neat-Fin/NeatFin_front/assets/96950198/74ba4f50-a541-49b3-9865-3427e82c4c09"/></td>
+      <td><img src="https://github.com/Neat-Fin/NeatFin_front/assets/96950198/9ff502da-dcf2-49c8-b29e-9bac31b79cb9"/></td>
     </tr>
   </table>
 
